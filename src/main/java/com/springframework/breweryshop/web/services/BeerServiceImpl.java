@@ -30,4 +30,15 @@ public class BeerServiceImpl implements BeerService{
     public BeerDto saveNewBeer(BeerDto beerDto) {
         return BeerDto.builder().id(UUID.randomUUID()).beerName("Bud").beerStyle("Blonde").upc(2L).build();
     }
+
+    /**
+     * Update Beer
+     *
+     * @param beerId
+     * @param beerDto
+     */
+    @Override
+    public void updateBeer(UUID beerId, BeerDto beerDto) {
+        //todo impl:
+    }
 }

@@ -43,10 +43,22 @@ public class BeerController {
      * @return
      */
     @PostMapping
-    public ResponseEntity handlePost(BeerDto beerDto) {
+    public ResponseEntity handlePost(@RequestBody BeerDto beerDto) {
         BeerDto savedBeer = this.beerService.saveNewBeer(beerDto);
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Location", "api/v1/beer" + savedBeer.getId().toString());
+        headers.add("Location", "api/v1/beer/" + savedBeer.getId().toString());
         return  new ResponseEntity<BeerDto>(headers, HttpStatus.CREATED);
+    }
+
+    /**
+     * Handle update.
+     * @param beerId
+     * @param beerDto
+     * @return No Content (204), accepted, nothing wrong.
+     */
+    @PutMapping("/{beerId}")
+    public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto){
+        this.beerService.updateBeer(beerId, beerDto);
+        return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 }
