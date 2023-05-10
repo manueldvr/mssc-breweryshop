@@ -51,7 +51,7 @@ public class BeerController {
     }
 
     /**
-     * Handle update.
+     * Handle update by id with a request body.
      * @param beerId
      * @param beerDto
      * @return No Content (204), accepted, nothing wrong.
@@ -60,5 +60,15 @@ public class BeerController {
     public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto){
         this.beerService.updateBeer(beerId, beerDto);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
+    }
+
+    /**
+     * Delete beer by id
+     * @param beerId
+     */
+    @DeleteMapping({"/beerdId"})
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteBeer(@PathVariable("beerId") UUID beerId) {
+        this.beerService.deleteById(beerId);
     }
 }

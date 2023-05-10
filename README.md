@@ -33,6 +33,12 @@ constructores con y sin argumentos.
 - @Builder<br>
 for implement Builder pattern.
 
+## Resources
+
+`Jakcson` object mapper
+
+`MockMvc`
+
 ## Developer Tools
 
 Added to Project via maven artifact.
@@ -45,7 +51,7 @@ Automatic Restart:
 * Uses 2 classloaders: One for my app, one for project .jar dependencies.
 * Restarts are very fast, since only your project classes are bring loaded.
 
-
+In IntelliJ by default select 'Build/Make Project'. 
 
 
 
@@ -72,6 +78,21 @@ customerService.getCustomerById(customerId)
 BeerService.handlePost(BeerDto beer)
 ~~~
 
+## API Versioning
+
+Versioning my APIs is consodering a good practice.<br>
+Example: <br>
+`/api/v1/beer` where `v1` is the API version.
+
+API versioning allows to evolve the API without breaking existing API consumers.
+
+Typical lifespan:
+
+* `v1` - first release
+* `v2` - second release, notify consumers `v1` version is deprecated
+* `v3` - remove `v1` (optional), notify consumers `v2` is deprecated
+
+### Semantic Versioning 2.0.0
 
 
 

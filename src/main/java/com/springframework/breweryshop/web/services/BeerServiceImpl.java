@@ -14,7 +14,7 @@ public class BeerServiceImpl implements BeerService{
 
     /**
      * Get
-     * @param beerId
+     * @param beerId id
      * @return
      */
     public BeerDto getBeerById(UUID beerId) {
@@ -23,7 +23,7 @@ public class BeerServiceImpl implements BeerService{
 
     /**
      * Save new Beer
-     * @param beerDto
+     * @param beerDto DTO
      * @return new beer
      */
     @Override
@@ -34,11 +34,20 @@ public class BeerServiceImpl implements BeerService{
     /**
      * Update Beer
      *
-     * @param beerId
-     * @param beerDto
+     * @param beerId id
+     * @param beerDto DTO
      */
     @Override
     public void updateBeer(UUID beerId, BeerDto beerDto) {
         //todo impl:
+    }
+
+    /**
+     * Delete beer by id
+     * @param beerId id
+     */
+    @Override
+    public void deleteById(UUID beerId) {
+
     }
 }
