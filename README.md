@@ -92,12 +92,43 @@ Typical lifespan:
 * `v2` - second release, notify consumers `v1` version is deprecated
 * `v3` - remove `v1` (optional), notify consumers `v2` is deprecated
 
+> `@Deprecated can be used for a `v1` elements.
+
 ### Semantic Versioning 2.0.0
 
+Version - MAJOR.MINOR.PATCH
 
+* __MAJOR__ - version for major incompatible API changes - aka breaking changes 
+* __MINOR__ - new functionality - backwards compatible changes
+* __PATCH__ - backwards compatible bug fixes
+
+API URLs typically only use MAJOR versions. Can optionally use MINOR and PATCH
+
+* `/v1` or `/v1.1`
+
+### Non-Breaking Changes
+
+Non-Breaking changes may be performed under MINOR or PATCH versions. Examples:
+
+* New optional parameter
+* New response fields
+* New service (endpoint)
+* Bug fixes - behavior change, NOT change to API itself
+
+### Breaking Changes
+
+Breaking Changes should be done under a MAJOR version. Examples:
+
+* New required parameter
+* Removal of existing parameter
+* Removal of response value
+* Parameter name change or type 
+* Deprecation of a service
+
+---
 
 ## References
 
-
+* Semantic Versioning 2.0.0 [Semantic Versioning](https://semver.org)
 
 [^1]: [Online UUID Generator](https://www.uuidgenerator.net)
