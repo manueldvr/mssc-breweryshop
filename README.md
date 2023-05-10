@@ -92,7 +92,7 @@ Typical lifespan:
 * `v2` - second release, notify consumers `v1` version is deprecated
 * `v3` - remove `v1` (optional), notify consumers `v2` is deprecated
 
-> `@Deprecated can be used for a `v1` elements.
+> `@Deprecated` can be used for a `v1` elements.
 
 ### Semantic Versioning 2.0.0
 
