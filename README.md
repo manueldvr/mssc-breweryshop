@@ -98,7 +98,7 @@ Typical lifespan:
 
 Version - MAJOR.MINOR.PATCH
 
-* __MAJOR__ - version for major incompatible API changes - aka breaking changes 
+* __MAJOR__ - version for major incompatible API changes - __aka breaking changes__ 
 * __MINOR__ - new functionality - backwards compatible changes
 * __PATCH__ - backwards compatible bug fixes
 
@@ -126,6 +126,40 @@ Breaking Changes should be done under a MAJOR version. Examples:
 * Deprecation of a service
 
 ---
+
+## Quiz
+
+###Diferencia entre @Controller y @RestController:
+
+@Controller esta anotacion es usada para parcar una clase como Controller en SpringMVC mientras @RestController es un controller especial en RESTful especificacion y equivale a la suma de @Controller y @ResponseBody.
+
+
+### Difference between the @RequestMapping and @GetMapping:
+
+@GetMapping is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod.GET).
+
+@GetMapping is the newer annotaion. It supports consumes. Consume options are :
+
+consumes = "text/plain"
+consumes = {"text/plain", "application/*"}
+
+For Further details see: GetMapping Annotation or read: request mapping variants.
+
+__RequestMapping supports consumes as well__
+
+GetMapping we can apply only on method level and RequestMapping annotation we can apply on class level and as well as on method level
+
+
+### Why should you version your APIs?
+
+Versioning allows me to evolve the API without breaking existing API consumers.
+
+
+### Which of the following is considered a breaking change, where the API's version should be incremented?
+
+
+
+
 
 ## References
 
