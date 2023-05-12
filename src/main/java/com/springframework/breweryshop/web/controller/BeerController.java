@@ -66,7 +66,7 @@ public class BeerController {
      * Delete beer by id
      * @param beerId
      */
-    @DeleteMapping({"/beerdId"})
+    @DeleteMapping({"/{beerId}"})
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteBeer(@PathVariable("beerId") UUID beerId) {
         this.beerService.deleteById(beerId);
