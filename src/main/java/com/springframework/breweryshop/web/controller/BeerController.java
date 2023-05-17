@@ -2,6 +2,7 @@ package com.springframework.breweryshop.web.controller;
 
 import com.springframework.breweryshop.web.model.BeerDto;
 import com.springframework.breweryshop.web.services.BeerService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.util.UUID;
  * Use BeerService as service layer.
  * @version 1
  */
+//@Deprecated
 @RequestMapping("api/v1/beer")
 @RestController
 public class BeerController {
@@ -43,7 +45,7 @@ public class BeerController {
      * @return
      */
     @PostMapping
-    public ResponseEntity handlePost(@RequestBody BeerDto beerDto) {
+    public ResponseEntity handlePost(@Valid @RequestBody BeerDto beerDto) {
         BeerDto savedBeer = this.beerService.saveNewBeer(beerDto);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Location", "api/v1/beer/" + savedBeer.getId().toString());
@@ -57,7 +59,7 @@ public class BeerController {
      * @return No Content (204), accepted, nothing wrong.
      */
     @PutMapping("/{beerId}")
-    public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto){
+    public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @Valid @RequestBody BeerDto beerDto){
         this.beerService.updateBeer(beerId, beerDto);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }

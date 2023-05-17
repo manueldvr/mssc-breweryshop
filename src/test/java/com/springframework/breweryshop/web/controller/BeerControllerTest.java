@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.core.SpringVersion;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -42,6 +43,7 @@ public class BeerControllerTest {
 
     @Before
     public void setUp() {
+        System.out.println(">>> SpringVersion.getVersion(): " + SpringVersion.getVersion());
         validBeer = BeerDto.builder().id(UUID.randomUUID())
                 .beerName("Beer1")
                 .beerStyle("PALE_ALE")
@@ -77,8 +79,9 @@ public class BeerControllerTest {
     @Test
     public void handleUpdate() throws Exception{
         BeerDto beerDto = validBeer;
+        validBeer.setId(null);
         String beerDtoJson = objectMapper.writeValueAsString(beerDto);
-        mockMvc.perform(put(url + "api/v1/beer/" + validBeer.getId())
+        mockMvc.perform(put(url + "api/v1/beer/" + UUID.randomUUID())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(beerDtoJson))
                 .andExpect(status().isNoContent());
