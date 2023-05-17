@@ -15,6 +15,7 @@ public class MVCExceptionHandler {
 
     /**
      * Handle validation.
+     *
      * @param exception class
      * @return response with list of errors
      */
