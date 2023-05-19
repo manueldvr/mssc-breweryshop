@@ -2,17 +2,17 @@ package com.springframework.breweryshop.web.controller.v2;
 
 import com.springframework.breweryshop.web.model.v2.BeerDtoV2;
 import com.springframework.breweryshop.web.services.v2.BeerServiceV2;
-import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 /**
@@ -21,17 +21,15 @@ import java.util.UUID;
  *
  * @version 2
  */
+@Slf4j
 @Validated
 @RequestMapping("api/v2/beer")
 @RestController
+@RequiredArgsConstructor
 public class BeerControllerV2 {
 
     private final BeerServiceV2 beerServiceV2;
 
-
-    public BeerControllerV2(BeerServiceV2 beerService) {
-        this.beerServiceV2 = beerService;
-    }
 
     /**
      * Get beer id method. Path and name arguments mapping is redundant in this case.
@@ -52,8 +50,9 @@ public class BeerControllerV2 {
      */
     @PostMapping
     public ResponseEntity handlePost(@Valid @NotNull @RequestBody BeerDtoV2 beerDto) {
-        BeerDtoV2 savedBeer = this.beerServiceV2.saveNewBeer(beerDto);
-        HttpHeaders headers = new HttpHeaders();
+        log.debug("In handle post");
+        val savedBeer = this.beerServiceV2.saveNewBeer(beerDto);
+        val headers = new HttpHeaders();
         headers.add("Location", "api/v1/beer/" + savedBeer.getId().toString());
         return  new ResponseEntity<BeerDtoV2>(headers, HttpStatus.CREATED);
     }
