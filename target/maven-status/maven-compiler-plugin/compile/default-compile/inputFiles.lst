@@ -1,0 +1,17 @@
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/controller/MVCExceptionHandler.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/services/BeerServiceImpl.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/controller/v2/BeerControllerV2.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/model/CustomerDto.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/domain/Beer.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/services/CustomerServiceImpl.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/model/BeerDto.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/services/CustomerService.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/MsscBreweryshopApplication.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/services/v2/BeerServiceV2.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/model/v2/BeerStyle.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/model/v2/BeerDtoV2.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/controller/CustomerController.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/services/BeerService.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/mappers/BeerMapper.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/controller/BeerController.java
+/Users/manuelvargas/Documents/Java/SpringBootMSWithSpringCloudAndDocker/lab/mssc-breweryshop/src/main/java/com/springframework/breweryshop/web/services/v2/BeerServiceV2Impl.java
